@@ -1,7 +1,7 @@
 import logging
 from pyrogram.types import Message
 from youtube_search import YoutubeSearch
-from RUDRA import app
+from Rudra import app
 from pyrogram import filters
 from config import BOT_USERNAME
 

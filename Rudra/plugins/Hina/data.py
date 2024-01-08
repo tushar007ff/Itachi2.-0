@@ -24,7 +24,7 @@ SOFTWARE.
 
 from pyrogram import Client, filters
 from faker import Faker
-from RUDRA import app
+from Rudra import app
 
 # Create a Faker instance
 fake = Faker()

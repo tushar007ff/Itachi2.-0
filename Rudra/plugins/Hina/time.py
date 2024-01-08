@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from datetime import datetime
 import pytz
-from RUDRA import app
+from Rudra import app
 
 
 def get_current_time():

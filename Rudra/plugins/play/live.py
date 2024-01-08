@@ -1,9 +1,9 @@
 from pyrogram import filters
 
-from RUDRA import YouTube, app
-from RUDRA.utils.channelplay import get_channeplayCB
-from RUDRA.utils.decorators.language import languageCB
-from RUDRA.utils.stream.stream import stream
+from Rudra import YouTube, app
+from Rudra.utils.channelplay import get_channeplayCB
+from Rudra.utils.decorators.language import languageCB
+from Rudra.utils.stream.stream import stream
 from config import BANNED_USERS
 
 

@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import requests
-from RUDRA import app
+from Rudra import app
 
 
 def get_pypi_info(package_name):

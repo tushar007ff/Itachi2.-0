@@ -1,11 +1,11 @@
 from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from RUDRA import app
-from RUDRA.core.call import Rudra
-from RUDRA.utils import bot_sys_stats
-from RUDRA.utils.decorators.language import language
-from RUDRA.utils.inline import supp_markup
+from Rudra import app
+from Rudra.core.call import Rudra
+from Rudra.utils import bot_sys_stats
+from Rudra.utils.decorators.language import language
+from Rudra.utils.inline import supp_markup
 from config import BANNED_USERS
 import aiohttp
 import asyncio
@@ -70,10 +70,10 @@ async def ping_com(client, message: Message, _):
         ],
         [
             InlineKeyboardButton(
-                text="✦ ɢʀᴏᴜᴘ ✦", url=f"https://t.me/RUDRA_JAAT_BIO",
+                text="✦ ɢʀᴏᴜᴘ ✦", url=f"https://t.me/Rudra_JAAT_BIO",
             ),
             InlineKeyboardButton(
-                text="✧ ᴍᴏʀᴇ ✧", url=f"https://t.me/RUDRA_JAAT_BIO",
+                text="✧ ᴍᴏʀᴇ ✧", url=f"https://t.me/Rudra_JAAT_BIO",
             )
         ],
         [

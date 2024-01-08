@@ -1,4 +1,4 @@
-from RUDRA import app
+from Rudra import app
 from os import environ
 from pyrogram import Client, filters
 from pyrogram.types import ChatJoinRequest

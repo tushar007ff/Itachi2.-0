@@ -9,13 +9,13 @@ from pyrogram.types import InputMediaPhoto, Message
 from pytgcalls.__version__ import __version__ as pytgver
 
 import config
-from RUDRA import app
-from RUDRA.core.userbot import assistants
-from RUDRA.misc import SUDOERS, mongodb
-from RUDRA.plugins import ALL_MODULES
-from RUDRA.utils.database import get_served_chats, get_served_users, get_sudoers
-from RUDRA.utils.decorators.language import language, languageCB
-from RUDRA.utils.inline.stats import back_stats_buttons, stats_buttons
+from Rudra import app
+from Rudra.core.userbot import assistants
+from Rudra.misc import SUDOERS, mongodb
+from Rudra.plugins import ALL_MODULES
+from Rudra.utils.database import get_served_chats, get_served_users, get_sudoers
+from Rudra.utils.decorators.language import language, languageCB
+from Rudra.utils.inline.stats import back_stats_buttons, stats_buttons
 from config import BANNED_USERS
 
 

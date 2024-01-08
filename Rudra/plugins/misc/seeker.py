@@ -1,7 +1,7 @@
 import asyncio
 
-from RUDRA.misc import db
-from RUDRA.utils.database import get_active_chats, is_music_playing
+from Rudra.misc import db
+from Rudra.utils.database import get_active_chats, is_music_playing
 
 
 async def timer():

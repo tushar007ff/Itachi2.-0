@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from RUDRA import app
+from Rudra import app
 
 
 @app.on_message(filters.command("st"))

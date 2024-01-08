@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from RUDRA import app
-from RUDRA.core.call import Rudra
+from Rudra import app
+from Rudra.core.call import Rudra
 
 welcome = 20
 close = 30

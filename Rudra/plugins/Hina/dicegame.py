@@ -1,7 +1,7 @@
 from pyrogram import Client, enums, filters
 #from config import *
 import asyncio
-from RUDRA import app as app
+from Rudra import app as app
 
 from pyrogram.handlers import MessageHandler
 

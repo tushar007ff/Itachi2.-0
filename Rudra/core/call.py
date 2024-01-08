@@ -17,9 +17,9 @@ from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQuality
 from pytgcalls.types.stream import StreamAudioEnded
 
 import config
-from RUDRA import LOGGER, YouTube, app
-from RUDRA.misc import db
-from RUDRA.utils.database import (
+from Rudra import LOGGER, YouTube, app
+from Rudra.misc import db
+from Rudra.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_lang,
@@ -31,11 +31,11 @@ from RUDRA.utils.database import (
     remove_active_video_chat,
     set_loop,
 )
-from RUDRA.utils.exceptions import AssistantErr
-from RUDRA.utils.formatters import check_duration, seconds_to_min, speed_converter
-from RUDRA.utils.inline.play import stream_markup
-from RUDRA.utils.stream.autoclear import auto_clean
-from RUDRA.utils.thumbnails import get_thumb
+from Rudra.utils.exceptions import AssistantErr
+from Rudra.utils.formatters import check_duration, seconds_to_min, speed_converter
+from Rudra.utils.inline.play import stream_markup
+from Rudra.utils.stream.autoclear import auto_clean
+from Rudra.utils.thumbnails import get_thumb
 from strings import get_string
 
 autoend = {}

@@ -1,5 +1,5 @@
 import asyncio
-from RUDRA import app
+from Rudra import app
 from pyrogram import filters
 
 

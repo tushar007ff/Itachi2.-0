@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from RUDRA import YouTube, app
-from RUDRA.core.call import Rudra
-from RUDRA.misc import db
-from RUDRA.utils import AdminRightsCheck, seconds_to_min
-from RUDRA.utils.inline import close_markup
+from Rudra import YouTube, app
+from Rudra.core.call import Rudra
+from Rudra.misc import db
+from Rudra.utils import AdminRightsCheck, seconds_to_min
+from Rudra.utils.inline import close_markup
 from config import BANNED_USERS
 
 

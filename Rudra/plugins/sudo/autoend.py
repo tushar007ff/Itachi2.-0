@@ -1,9 +1,9 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from RUDRA import app
-from RUDRA.misc import SUDOERS
-from RUDRA.utils.database import autoend_off, autoend_on
+from Rudra import app
+from Rudra.misc import SUDOERS
+from Rudra.utils.database import autoend_off, autoend_on
 
 
 @app.on_message(filters.command("autoend") & SUDOERS)

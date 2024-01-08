@@ -1,7 +1,7 @@
 """***
 MIT License
 
-Copyright (c) [2023] [RUDRA TEAM]
+Copyright (c) [2023] [Rudra TEAM]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.***
 import requests
 from pyrogram import Client
 from pyrogram import filters
-from RUDRA import app
+from Rudra import app
 
 
 random_user_api_url = 'https://randomuser.me/api/'

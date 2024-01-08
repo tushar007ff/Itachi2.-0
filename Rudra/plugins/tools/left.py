@@ -1,7 +1,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 import random 
-from RUDRA import app
+from Rudra import app
 from datetime import datetime
 
 @app.on_message(filters.left_chat_member)

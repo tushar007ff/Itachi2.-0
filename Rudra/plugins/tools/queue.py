@@ -6,12 +6,12 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 
 import config
-from RUDRA import app
-from RUDRA.misc import db
-from RUDRA.utils import RudraBin, get_channeplayCB, seconds_to_min
-from RUDRA.utils.database import get_cmode, is_active_chat, is_music_playing
-from RUDRA.utils.decorators.language import language, languageCB
-from RUDRA.utils.inline import queue_back_markup, queue_markup
+from Rudra import app
+from Rudra.misc import db
+from Rudra.utils import RudraBin, get_channeplayCB, seconds_to_min
+from Rudra.utils.database import get_cmode, is_active_chat, is_music_playing
+from Rudra.utils.decorators.language import language, languageCB
+from Rudra.utils.inline import queue_back_markup, queue_markup
 from config import BANNED_USERS
 
 basic = {}

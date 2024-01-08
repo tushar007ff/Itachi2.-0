@@ -1,7 +1,7 @@
 """**
 MIT License
 
-Copyright (c) [All] [RUDRA TEAM]
+Copyright (c) [All] [Rudra TEAM]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,7 @@ from pyrogram import Client, filters
 import git
 import shutil
 import os
-from RUDRA import app
+from Rudra import app
 
 
 

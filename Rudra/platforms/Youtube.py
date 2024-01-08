@@ -8,8 +8,8 @@ from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
 from youtubesearchpython.__future__ import VideosSearch
 
-from RUDRA.utils.database import is_on_off
-from RUDRA.utils.formatters import time_to_seconds
+from Rudra.utils.database import is_on_off
+from Rudra.utils.formatters import time_to_seconds
 
 
 async def shell_cmd(cmd):

@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from RUDRA import app
-from RUDRA.core.call import Rudra
-from RUDRA.utils.database import is_music_playing, music_off
-from RUDRA.utils.decorators import AdminRightsCheck
-from RUDRA.utils.inline import close_markup
+from Rudra import app
+from Rudra.core.call import Rudra
+from Rudra.utils.database import is_music_playing, music_off
+from Rudra.utils.decorators import AdminRightsCheck
+from Rudra.utils.inline import close_markup
 from config import BANNED_USERS
 
 

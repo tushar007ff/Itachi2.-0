@@ -1,8 +1,8 @@
-from RUDRA.core.bot import Rudra
-from RUDRA.core.dir import dirr
-from RUDRA.core.git import git
-from RUDRA.core.userbot import Userbot
-from RUDRA.misc import dbb, heroku
+from Rudra.core.bot import Rudra
+from Rudra.core.dir import dirr
+from Rudra.core.git import git
+from Rudra.core.userbot import Userbot
+from Rudra.misc import dbb, heroku
 
 from SafoneAPI import SafoneAPI
 from .logging import LOGGER

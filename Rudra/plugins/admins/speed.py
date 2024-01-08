@@ -1,13 +1,13 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from RUDRA import app
-from RUDRA.core.call import Rudra
-from RUDRA.misc import SUDOERS, db
-from RUDRA.utils import AdminRightsCheck
-from RUDRA.utils.database import is_active_chat, is_nonadmin_chat
-from RUDRA.utils.decorators.language import languageCB
-from RUDRA.utils.inline import close_markup, speed_markup
+from Rudra import app
+from Rudra.core.call import Rudra
+from Rudra.misc import SUDOERS, db
+from Rudra.utils import AdminRightsCheck
+from Rudra.utils.database import is_active_chat, is_nonadmin_chat
+from Rudra.utils.decorators.language import languageCB
+from Rudra.utils.inline import close_markup, speed_markup
 from config import BANNED_USERS, adminlist
 
 checker = []

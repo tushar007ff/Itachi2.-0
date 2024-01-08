@@ -1,6 +1,6 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from RUDRA import app
+from Rudra import app
 from config import BOT_USERNAME
 
 start_txt = """**
@@ -29,11 +29,11 @@ async def start(_, msg):
           InlineKeyboardButton("𝗔𝗗𝗗 𝗠𝗘", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-          InlineKeyboardButton("𝗛𝗘𝗟𝗣", url="https://t.me/RUDRA_JAAT_BIO"),
-          InlineKeyboardButton("𝗢𝗪𝗡𝗘𝗥", url="https://t.me/RUDRA_JAAT_1"),
+          InlineKeyboardButton("𝗛𝗘𝗟𝗣", url="https://t.me/Rudra_JAAT_BIO"),
+          InlineKeyboardButton("𝗢𝗪𝗡𝗘𝗥", url="https://t.me/Rudra_JAAT_1"),
           ],
           [
-              InlineKeyboardButton("︎𝗠𝗨𝗦𝗜𝗖", url=f"https://github.com/RUDRA-JAAT/Rudra-Music"),
+              InlineKeyboardButton("︎𝗠𝗨𝗦𝗜𝗖", url=f"https://github.com/Rudra-JAAT/Rudra-Music"),
               ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)

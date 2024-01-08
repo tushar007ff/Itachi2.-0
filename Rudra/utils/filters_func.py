@@ -1,8 +1,8 @@
 from enum import Enum, auto
-from RUDRA import app
+from Rudra import app
 from pyrogram.types import InlineKeyboardMarkup, Message
-from RUDRA.utils.msg_types import button_markdown_parser
-from RUDRA.utils.notes_func import NoteFillings
+from Rudra.utils.msg_types import button_markdown_parser
+from Rudra.utils.notes_func import NoteFillings
 from emojis import decode
 from pyrogram.types import Message
 

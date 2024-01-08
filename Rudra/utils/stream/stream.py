@@ -5,15 +5,15 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from RUDRA import Carbon, YouTube, app
-from RUDRA.core.call import Rudra
-from RUDRA.misc import db
-from RUDRA.utils.database import add_active_video_chat, is_active_chat
-from RUDRA.utils.exceptions import AssistantErr
-from RUDRA.utils.inline import aq_markup, close_markup, stream_markup
-from RUDRA.utils.pastebin import RudraBin
-from RUDRA.utils.stream.queue import put_queue, put_queue_index
-from RUDRA.utils.thumbnails import get_thumb
+from Rudra import Carbon, YouTube, app
+from Rudra.core.call import Rudra
+from Rudra.misc import db
+from Rudra.utils.database import add_active_video_chat, is_active_chat
+from Rudra.utils.exceptions import AssistantErr
+from Rudra.utils.inline import aq_markup, close_markup, stream_markup
+from Rudra.utils.pastebin import RudraBin
+from Rudra.utils.stream.queue import put_queue, put_queue_index
+from Rudra.utils.thumbnails import get_thumb
 
 
 async def stream(

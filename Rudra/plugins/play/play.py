@@ -6,22 +6,22 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from RUDRA import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from RUDRA.core.call import Rudra
-from RUDRA.utils import seconds_to_min, time_to_seconds
-from RUDRA.utils.channelplay import get_channeplayCB
-from RUDRA.utils.decorators.language import languageCB
-from RUDRA.utils.decorators.play import PlayWrapper
-from RUDRA.utils.formatters import formats
-from RUDRA.utils.inline import (
+from Rudra import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from Rudra.core.call import Rudra
+from Rudra.utils import seconds_to_min, time_to_seconds
+from Rudra.utils.channelplay import get_channeplayCB
+from Rudra.utils.decorators.language import languageCB
+from Rudra.utils.decorators.play import PlayWrapper
+from Rudra.utils.formatters import formats
+from Rudra.utils.inline import (
     botplaylist_markup,
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from RUDRA.utils.logger import play_logs
-from RUDRA.utils.stream.stream import stream
+from Rudra.utils.logger import play_logs
+from Rudra.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
 

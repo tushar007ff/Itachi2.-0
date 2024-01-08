@@ -3,7 +3,7 @@ import httpx
 import os
 from pyrogram import filters
 from config import BOT_USERNAME
-from RUDRA import app
+from Rudra import app
 from pyrogram import filters
 import pyrogram
 from uuid import uuid4

@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 import requests
-from RUDRA import app
+from Rudra import app
 
 # Function to chunk the repository info into smaller parts
 def chunk_string(text, chunk_size):

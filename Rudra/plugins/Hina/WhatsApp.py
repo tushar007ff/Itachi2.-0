@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from RUDRA import app 
+from Rudra import app 
 
 # Command to generate a direct WhatsApp link
 @app.on_message(filters.command("WhatsApp"))

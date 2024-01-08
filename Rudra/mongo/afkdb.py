@@ -1,4 +1,4 @@
-from RUDRA.utils.mongo import db
+from Rudra.utils.mongo import db
 
 afkdb = db.afk
 

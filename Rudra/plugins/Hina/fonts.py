@@ -1,8 +1,8 @@
 from pyrogram import  filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from RUDRA.utils.Rudra_font import Fonts
-from RUDRA import app
+from Rudra.utils.Rudra_font import Fonts
+from Rudra import app
 
 @app.on_message(filters.command(["font", "fonts"]))
 async def style_buttons(c, m, cb=False):

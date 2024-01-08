@@ -10,15 +10,15 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 from pyrogram import filters
 
 import config
-from RUDRA import app
-from RUDRA.misc import HAPP, SUDOERS, XCB
-from RUDRA.utils.database import (
+from Rudra import app
+from Rudra.misc import HAPP, SUDOERS, XCB
+from Rudra.utils.database import (
     get_active_chats,
     remove_active_chat,
     remove_active_video_chat,
 )
-from RUDRA.utils.decorators.language import language
-from RUDRA.utils.pastebin import RudraBin
+from Rudra.utils.decorators.language import language
+from Rudra.utils.pastebin import RudraBin
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 

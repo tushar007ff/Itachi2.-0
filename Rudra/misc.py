@@ -5,7 +5,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from RUDRA.core.mongo import mongodb
+from Rudra.core.mongo import mongodb
 
 from .logging import LOGGER
 

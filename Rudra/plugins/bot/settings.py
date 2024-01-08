@@ -8,8 +8,8 @@ from pyrogram.types import (
     Message,
 )
 
-from RUDRA import app
-from RUDRA.utils.database import (
+from Rudra import app
+from Rudra.utils.database import (
     add_nonadmin_chat,
     get_authuser,
     get_authuser_names,
@@ -25,15 +25,15 @@ from RUDRA.utils.database import (
     skip_off,
     skip_on,
 )
-from RUDRA.utils.decorators.admins import ActualAdminCB
-from RUDRA.utils.decorators.language import language, languageCB
-from RUDRA.utils.inline.settings import (
+from Rudra.utils.decorators.admins import ActualAdminCB
+from Rudra.utils.decorators.language import language, languageCB
+from Rudra.utils.inline.settings import (
     auth_users_markup,
     playmode_users_markup,
     setting_markup,
     vote_mode_markup,
 )
-from RUDRA.utils.inline.start import private_panel
+from Rudra.utils.inline.start import private_panel
 from config import BANNED_USERS, OWNER_ID
 
 

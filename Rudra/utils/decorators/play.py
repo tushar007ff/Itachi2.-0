@@ -9,9 +9,9 @@ from pyrogram.errors import (
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from RUDRA import YouTube, app
-from RUDRA.misc import SUDOERS
-from RUDRA.utils.database import (
+from Rudra import YouTube, app
+from Rudra.misc import SUDOERS
+from Rudra.utils.database import (
     get_assistant,
     get_cmode,
     get_lang,
@@ -20,7 +20,7 @@ from RUDRA.utils.database import (
     is_active_chat,
     is_maintenance,
 )
-from RUDRA.utils.inline import botplaylist_markup
+from Rudra.utils.inline import botplaylist_markup
 from config import PLAYLIST_IMG_URL, SUPPORT_CHAT, adminlist
 from strings import get_string
 

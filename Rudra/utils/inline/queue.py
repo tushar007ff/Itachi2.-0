@@ -1,6 +1,6 @@
 from typing import Union
-from RUDRA import app
-from RUDRA.utils.formatters import time_to_seconds
+from Rudra import app
+from Rudra.utils.formatters import time_to_seconds
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 

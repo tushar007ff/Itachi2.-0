@@ -2,7 +2,7 @@ from os import path
 
 from yt_dlp import YoutubeDL
 
-from RUDRA.utils.formatters import seconds_to_min
+from Rudra.utils.formatters import seconds_to_min
 
 
 class SoundAPI:

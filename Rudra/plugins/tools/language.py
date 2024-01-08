@@ -2,9 +2,9 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, Message
 
-from RUDRA import app
-from RUDRA.utils.database import get_lang, set_lang
-from RUDRA.utils.decorators import ActualAdminCB, language, languageCB
+from Rudra import app
+from Rudra.utils.database import get_lang, set_lang
+from Rudra.utils.decorators import ActualAdminCB, language, languageCB
 from config import BANNED_USERS
 from strings import get_string, languages_present
 

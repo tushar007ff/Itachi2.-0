@@ -3,8 +3,8 @@ from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.errors import MessageDeleteForbidden, RPCError
 from pyrogram.types import Message
-from RUDRA.utils.Rudra_ban import admin_filter
-from RUDRA import app
+from Rudra.utils.Rudra_ban import admin_filter
+from Rudra import app
 
 
 @app.on_message(filters.command("purge") & admin_filter)

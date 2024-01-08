@@ -1,7 +1,7 @@
 from pyrogram.enums import ParseMode
 
-from RUDRA import app
-from RUDRA.utils.database import is_on_off
+from Rudra import app
+from Rudra.utils.database import is_on_off
 from config import LOGGER_ID
 
 

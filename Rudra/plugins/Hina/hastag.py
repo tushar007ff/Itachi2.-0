@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup as  BSP
-from RUDRA import app as Rudra
+from Rudra import app as Rudra
 from pyrogram import filters
 url = "https://all-hashtag.com/library/contents/ajax_generator.php"
 

@@ -2,14 +2,14 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from RUDRA import YouTube, app
-from RUDRA.core.call import Rudra
-from RUDRA.misc import db
-from RUDRA.utils.database import get_loop
-from RUDRA.utils.decorators import AdminRightsCheck
-from RUDRA.utils.inline import close_markup, stream_markup
-from RUDRA.utils.stream.autoclear import auto_clean
-from RUDRA.utils.thumbnails import get_thumb
+from Rudra import YouTube, app
+from Rudra.core.call import Rudra
+from Rudra.misc import db
+from Rudra.utils.database import get_loop
+from Rudra.utils.decorators import AdminRightsCheck
+from Rudra.utils.inline import close_markup, stream_markup
+from Rudra.utils.stream.autoclear import auto_clean
+from Rudra.utils.thumbnails import get_thumb
 from config import BANNED_USERS
 
 

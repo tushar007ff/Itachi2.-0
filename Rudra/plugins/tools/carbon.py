@@ -1,6 +1,6 @@
 import aiohttp
 from io import BytesIO
-from RUDRA import app
+from Rudra import app
 from pyrogram import filters
 
 
