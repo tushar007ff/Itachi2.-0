@@ -20,7 +20,7 @@ from Rudra.utils.extraction import extract_user
 from config import BANNED_USERS
 
 
-@app.on_message(filters.command(["vbjvc", "fhjbcg"]) & SUDOERS)
+@app.on_message(filters.command(["gban", "globalban"]) & SUDOERS)
 @language
 async def global_ban(client, message: Message, _):
     if not message.reply_to_message:
