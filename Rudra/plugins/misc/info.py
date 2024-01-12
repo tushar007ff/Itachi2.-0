@@ -99,7 +99,7 @@ async def userstatus(user_id):
 
 # --------------------------------------------------------------------------------- #
 
-@Hiroko.on_message(filters.command(["info", "userinfo"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]))
+@Hiroko.on_message(filters.command(["gjbf", "hugcv"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]))
 async def userinfo(_, message):
     chat_id = message.chat.id
     user_id = message.from_user.id
