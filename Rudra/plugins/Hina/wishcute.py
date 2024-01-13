@@ -4,7 +4,7 @@ import random
 import requests
 from Rudra import app 
 
-SUPPORT_CHAT = "Rudra_JAAT_BIO"
+SUPPORT_CHAT = "mei_support"
 
 @app.on_message(filters.command("wish"))
 async def wish(_, m):
