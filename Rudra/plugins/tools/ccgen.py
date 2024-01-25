@@ -27,7 +27,7 @@ async def gen_cc(client, message):
 `{cards[6]}`\n`{cards[7]}`\n`{cards[8]}`
 `{cards[9]}`
 **💳 Bin:** `{resp.results[0].bin}`
-**⏳ Time Took:** `{resp.took}`\n\n @Hinatabot"""
+**⏳ Time Took:** `{resp.took}`\n\n @Mei_pro_robot"""
         )
     except Exception as e:
         return await aux.edit(f"**Error:** `{e}`")
