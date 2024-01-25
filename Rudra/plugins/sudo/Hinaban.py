@@ -11,7 +11,7 @@ from Rudra.utils.Rudra_ban import admin_filter
 
 
 
-Hinata_text = [
+Mei_text = [
 "hey please don't disturb me.",
 "who are you",    
 "aap kon ho",
