@@ -10,7 +10,7 @@ from Rudra.misc import SUDOERS
 
 
 
-BOT_LIST = ["HinataBot", "RudraTEAMBOT"]
+BOT_LIST = ["Mei_pro_robot", "itachiTEAMBOT"]
 
 
 
