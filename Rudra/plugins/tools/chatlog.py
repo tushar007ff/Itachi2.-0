@@ -70,14 +70,12 @@ async def join_watcher(_, message):
             count = await app.get_chat_members_count(chat.id)
 
             msg = (
-                f"📝 ᴍᴜsɪᴄ ʙᴏᴛ ᴀᴅᴅᴇᴅ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ\n\n"
-                f"____________________________________\n\n"
-                f"📌 ᴄʜᴀᴛ ɴᴀᴍᴇ: {message.chat.title}\n"
-                f"🍂 ᴄʜᴀᴛ ɪᴅ: {message.chat.id}\n"
-                f"🔐 ᴄʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ: @{message.chat.username}\n"
-                f"🛰 ᴄʜᴀᴛ ʟɪɴᴋ: [ᴄʟɪᴄᴋ]({link})\n"
-                f"📈 ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs: {count}\n"
-                f"🤔 ᴀᴅᴅᴇᴅ ʙʏ: {message.from_user.mention}"
+                f"**🌷𝐇ᴇʏ {message.from_user.mention}**\n\n**🏘𝐓ʜᴀɴᴋs 𝐅ᴏʀ 𝐀ᴅᴅɪɴɢ 𝐋ᴏᴠᴇ 𝐘ᴏᴜ 𝐃ᴏsᴛ🥳**\n\n"
+            f"**📝𝐂ʜᴀᴛ 𝐍ᴀᴍᴇ: {chat.title}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
+            f"**🔐𝐂ʜᴀᴛ 𝐔.𝐍: @{chat.username}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
+            f"**💖𝐔ʀ 𝐈d: {member.new_chat_member.user.id}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
+            f"**✍️𝐔ʀ 𝐔.𝐍: @{member.new_chat_member.user.username}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
+            f"**👥𝐂ᴏᴍᴘʟᴇᴛᴇᴅ {count} 𝐌ᴇᴍʙᴇʀ𝐬🎉**"
             )
             await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton(f"sᴇᴇ ɢʀᴏᴜᴘ👀", url=f"{link}")]
