@@ -103,13 +103,12 @@ async def _greet(_, message):
             count = await app.get_chat_members_count(chat.id)
 
             msg = (
-                f"ᴡᴇʟᴄᴏᴍᴇ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ\n\n"
-
-♛f"ᴄʜᴀᴛ ᴜ.ɴ: @{message.chat.username}\n"
-⍟f"ᴜʀ ɪᴅ: {member.id}\n"
-⍟f"ᴜʀ ᴜ.ɴᴀᴍᴇ: @{member.username}\n"
-⍟f"ᴄᴏᴍᴘʟᴇᴛᴇ {ᴄᴏᴜɴᴛ}ᴍᴇᴍʙᴇʀs\n"
-
+                f"ᴡᴇʟᴄᴏᴍᴇ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ💋\n\n"
+                f"ᴄʜᴀᴛ ɴᴀᴍᴇ: {message.chat.title}\n"
+                f"ᴄʜᴀᴛ ᴜ.ɴ: @{message.chat.username}\n"
+                f"ᴜʀ ɪᴅ: {member.id}\n"
+                f"ᴜʀ ᴜ.ɴaмe: @{member.username}\n"
+                f"ᴄᴏᴍᴘʟᴇᴛᴇᴅ {count} ᴍᴇᴍʙᴇ
 )
             await app.send_photo(message.chat.id, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton(f"𝐊ɪᴅɴᴀᴘ 𝐌ᴇ", url=f"https://t.me/{app.username}?startgroup=true")]
