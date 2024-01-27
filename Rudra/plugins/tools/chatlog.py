@@ -105,12 +105,12 @@ async def _greet(_, message):
             msg = (
                 f"ᴡᴇʟᴄᴏᴍᴇ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ\n\n"
 
-┏━━━━»»❀
+f"┏━━━━»»❀\n\n"
 ♛f"ᴄʜᴀᴛ ᴜ.ɴ: @{message.chat.username}\n"
 ⍟f"ᴜʀ ɪᴅ: {member.id}\n"
 ⍟f"ᴜʀ ᴜ.ɴᴀᴍᴇ: @{member.username}\n"
 ⍟f"ᴄᴏᴍᴘʟᴇᴛᴇ {ᴄᴏᴜɴᴛ}ᴍᴇᴍʙᴇʀs
-┕━━━━━━━━━━━━»»❀
+f"┕━━━━━━━━━━━━»»❀/n/n"
 )
             await app.send_photo(message.chat.id, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton(f"𝐊ɪᴅɴᴀᴘ 𝐌ᴇ", url=f"https://t.me/{app.username}?startgroup=true")]
