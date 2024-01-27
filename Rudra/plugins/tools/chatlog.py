@@ -70,12 +70,12 @@ async def join_watcher(_, message):
             count = await app.get_chat_members_count(chat.id)
 
             msg = (
-                f"**🌷𝐇ᴇʏ {message.from_user.mention}**\n\n**🏘𝐓ʜᴀɴᴋs 𝐅ᴏʀ 𝐀ᴅᴅɪɴɢ 𝐋ᴏᴠᴇ 𝐘ᴏᴜ 𝐃ᴏsᴛ🥳**\n\n"
-            f"**📝𝐂ʜᴀᴛ 𝐍ᴀᴍᴇ: {chat.title}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
-            f"**🔐𝐂ʜᴀᴛ 𝐔.𝐍: @{chat.username}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
-            f"**💖𝐔ʀ 𝐈d: {member.new_chat_member.user.id}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
-            f"**✍️𝐔ʀ 𝐔.𝐍: @{member.new_chat_member.user.username}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
-            f"**👥𝐂ᴏᴍᴘʟᴇᴛᴇᴅ {count} 𝐌ᴇᴍʙᴇʀ𝐬🎉**"
+                f"**ʜᴇʏ {message.from_user.mention}**\n\n**🏘ᴛʜᴀɴᴋs ғᴏʀ ᴀᴅᴅɪɴɢ ʟᴏᴠᴇ ʏᴏᴜ ᴅᴏsᴛ🥳**\n\n"
+            f"**ᴄʜᴀᴛ ɴᴀᴍᴇ: {chat.title}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
+            f"**ᴄʜᴀᴛ ᴜ.ɴ: @{chat.username}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
+            f"**ᴜʀ ɪᴅ: {member.new_chat_member.user.id}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
+            f"**ᴜʀ ᴜ.ɴ: @{member.new_chat_member.user.username}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
+            f"**ᴄᴏᴍᴘʟᴇᴛᴇᴅ {count} ᴍᴇᴍʙᴇʀ𝐬🎉**"
             )
             await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton(f"sᴇᴇ ɢʀᴏᴜᴘ👀", url=f"{link}")]
@@ -103,12 +103,12 @@ async def _greet(_, message):
             count = await app.get_chat_members_count(chat.id)
 
             msg = (
-                f"🌷{member.id}𝐖ᴇʟᴄᴏᴍᴇ 𝐈ɴ ᴀ 𝐍ᴇᴡ 𝐆ʀᴏᴜᴘ🥳\n\n"
-                f"📌𝐂ʜᴀᴛ 𝐍ᴀᴍᴇ: {message.chat.title}\n"
-                f"🔐𝐂ʜᴀᴛ 𝐔.𝐍: @{message.chat.username}\n"
-                f"💖𝐔ʀ 𝐈d: {member.id}\n"
-                f"✍️𝐔ʀ 𝐔.𝐍aмe: @{member.username}\n"
-                f"👥𝐂ᴏᴍᴘʟᴇᴛᴇᴅ {count} 𝐌ᴇᴍʙᴇʀ𝐬🎉"
+                f"ᴡᴇʟᴄᴏᴍᴇ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ🥳\n\n"
+                f"ᴄʜᴀᴛ ɴᴀᴍᴇ: {message.chat.title}\n"
+                f"ᴄʜᴀᴛ ᴜ.ɴ: @{message.chat.username}\n"
+                f"ᴜʀ ɪᴅ: {member.id}\n"
+                f"ᴜʀ ᴜ.ɴaмe: @{member.username}\n"
+                f"ᴄᴏᴍᴘʟᴇᴛᴇᴅ {count} ᴍᴇᴍʙᴇʀ𝐬🎉"
             )
             await app.send_photo(message.chat.id, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton(f"𝐊ɪᴅɴᴀᴘ 𝐌ᴇ", url=f"https://t.me/{app.username}?startgroup=true")]
