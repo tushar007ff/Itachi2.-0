@@ -107,7 +107,7 @@ f"┏━━━━»»❀\n"
 f"ᴄʜᴀᴛ ᴜ.ɴ: @{chat.username}\n"
 f"ᴜʀ ɪᴅ: {member.new_chat_member.user.id}\n"
 f"ᴜʀ ᴜ.ɴᴀᴍᴇ: @{member.new_chat_member.user.username}\n"
-f"ᴄᴏᴍᴘʟᴇᴛᴇ {ᴄᴏᴜɴᴛ}ᴍᴇᴍʙᴇʀs
+f"ᴄᴏᴍᴘʟᴇᴛᴇ {ᴄᴏᴜɴᴛ}ᴍᴇᴍʙᴇʀs\n"
 f"┕━━━━━━━━━━━━»»❀/n"
 )
             button_text = "๏ ᴠɪᴇᴡ ᴘʀᴏғɪʟᴇ ๏"
