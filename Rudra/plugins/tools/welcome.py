@@ -101,13 +101,15 @@ async def handle_member_update(client: app, member: ChatMemberUpdated):
         if member.new_chat_member:
             # Welcome message for new members
             caption = (
-            f"**𝐇ᴇʏ {member.new_chat_member.user.mention}**\n\n**🏘𝐖ᴇʟᴄᴏᴍᴇ 𝐈ɴ 𝐍ᴇᴡ 𝐆ʀᴏᴜᴘ**\n\n"
-            f"**𝐂ʜᴀᴛ 𝐍ᴀᴍᴇ: {chat.title}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
-            f"**🔐𝐂ʜᴀᴛ 𝐔.𝐍: @{chat.username}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
-            f"**𝐔ʀ 𝐈d: {member.new_chat_member.user.id}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
-            f"**𝐔ʀ 𝐔.𝐍: @{member.new_chat_member.user.username}**\n➖➖➖➖➖➖➖➖➖➖➖\n"
-            f"**👥𝐂ᴏᴍᴘʟᴇᴛᴇᴅ {count} 𝐌ᴇᴍʙᴇʀ𝐬🎉**"
-            )
+            f"ᴡᴇʟᴄᴏᴍᴇ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ\n\n"
+
+f"┏━━━━»»❀\n"
+f"ᴄʜᴀᴛ ᴜ.ɴ: @{chat.username}\n"
+f"ᴜʀ ɪᴅ: {member.new_chat_member.user.id}\n"
+f"ᴜʀ ᴜ.ɴᴀᴍᴇ: @{member.new_chat_member.user.username}\n"
+f"ᴄᴏᴍᴘʟᴇᴛᴇ {ᴄᴏᴜɴᴛ}ᴍᴇᴍʙᴇʀs
+f"┕━━━━━━━━━━━━»»❀/n"
+)
             button_text = "๏ ᴠɪᴇᴡ ᴘʀᴏғɪʟᴇ ๏"
         else:
             # Farewell message for members who have left
