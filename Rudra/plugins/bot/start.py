@@ -6,12 +6,10 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
-from ItachiXMusic import app
-from ItachiXMusic.misc import _boot_
-from ItachiXMusic.plugins.sudo.sudoers import sudoers_list
-from ItachiXMusic.utils.database import get_served_chats, get_served_users, get_sudoers
-from ItachiXMusic.utils import bot_sys_stats
-from ItachiXMusic.utils.database import (
+from Rudra import app
+from Rudra.misc import _boot_
+from Rudra.plugins.sudo.sudoers import sudoers_list
+from Rudra.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -19,12 +17,11 @@ from ItachiXMusic.utils.database import (
     is_banned_user,
     is_on_off,
 )
-from ItachiXMusic.utils.decorators.language import LanguageStart
-from ItachiXMusic.utils.formatters import get_readable_time
-from ItachiXMusic.utils.inline import help_pannel, private_panel, start_panel
+from Rudra.utils.decorators.language import LanguageStart
+from Rudra.utils.formatters import get_readable_time
+from Rudra.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
-
 
 
 Hina_PICS = [
