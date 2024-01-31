@@ -6,12 +6,12 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
-from Rudra import app
-from Rudra.misc import _boot_
-from Rudra.plugins.sudo.sudoers import sudoers_list
-from Rudra.utils.database import get_served_chats, get_served_users, get_sudoers
-from Rudra.utils import bot_sys_stats
-from Rudra.utils.database import (
+from ItachiXMusic import app
+from ItachiXMusic.misc import _boot_
+from ItachiXMusic.plugins.sudo.sudoers import sudoers_list
+from ItachiXMusic.utils.database import get_served_chats, get_served_users, get_sudoers
+from ItachiXMusic.utils import bot_sys_stats
+from ItachiXMusic.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -19,9 +19,9 @@ from Rudra.utils.database import (
     is_banned_user,
     is_on_off,
 )
-from Rudra.utils.decorators.language import LanguageStart
-from Rudra.utils.formatters import get_readable_time
-from Rudra.utils.inline import help_pannel, private_panel, start_panel
+from ItachiXMusic.utils.decorators.language import LanguageStart
+from ItachiXMusic.utils.formatters import get_readable_time
+from ItachiXMusic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
 
@@ -162,16 +162,12 @@ async def welcome(client, message: Message):
                 out = start_panel(_)
                 await message.reply_photo(
                     random.choice(Hina_PICS),
-                    caption = (
-            f"ᴡᴇʟᴄᴏᴍᴇ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ\n\n"
-
-f"┏━━━━»»❀\n"
-f"ᴄʜᴀᴛ ᴜ.ɴ: @{chat.username}\n"
-f"ᴜʀ ɪᴅ: {member.new_chat_member.user.id}\n"
-f"ᴜʀ ᴜ.ɴᴀᴍᴇ: @{member.new_chat_member.user.username}\n"
-f"ᴄᴏᴍᴘʟᴇᴛᴇ {ᴄᴏᴜɴᴛ}ᴍᴇᴍʙᴇʀs\n"
-f"┕━━━━━━━━━━━━»»❀/n"
-            )
+                    caption=_["start_3"].format(
+                        message.from_user.mention,
+                        app.mention,
+                        message.chat.title,
+                        app.mention,
+                    ),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
                 await add_served_chat(message.chat.id)
