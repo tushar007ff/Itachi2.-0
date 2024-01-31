@@ -77,9 +77,9 @@ font_path = "Rudra/assets/hiroko.ttf"
 # Function to handle both new members and members who have left
 async def handle_member_update(client: app, member: ChatMemberUpdated):
     chat = member.chat
-    
+
     count = await app.get_chat_members_count(chat.id)
-   
+
     user = member.new_chat_member.user if member.new_chat_member else member.old_chat_member.user
     try:
         if user.photo:
@@ -96,7 +96,7 @@ async def handle_member_update(client: app, member: ChatMemberUpdated):
             welcome_photo = random.choice(random_photo)
 
         # Assuming you have a way to obtain the member count
-        
+
 
         if member.new_chat_member:
             # Welcome message for new members
@@ -134,5 +134,3 @@ async def handle_member_update(client: app, member: ChatMemberUpdated):
 @app.on_chat_member_updated(filters.group, group=20)
 async def member_update_handler(client: app, member: ChatMemberUpdated):
     await handle_member_update(client, member)
-
-
