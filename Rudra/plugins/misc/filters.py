@@ -1,10 +1,10 @@
 import re
 from Rudra import app
 from config import BOT_USERNAME
-from Rudra.utils.Rudra_ban import admin_filter
+from Rudra.utils.daxx_ban import admin_filter
 from Rudra.mongo.filtersdb import *
 from Rudra.utils.filters_func import GetFIlterMessage, get_text_reason, SendFilterMessage
-from Rudra.utils.Hinadb import user_admin
+from Rudra.utils.yumidb import user_admin
 from pyrogram import filters
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
@@ -12,7 +12,7 @@ from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMa
 @app.on_message(filters.command("filter") & admin_filter)
 @user_admin
 async def _filter(client, message):
-
+    
     chat_id = message.chat.id 
     if (
         message.reply_to_message
@@ -20,7 +20,7 @@ async def _filter(client, message):
     ):
         await message.reply("You need to give the filter a name!")  
         return 
-
+    
     filter_name, filter_reason = get_text_reason(message)
     if (
         message.reply_to_message
@@ -49,7 +49,7 @@ async def FilterCheckker(client, message):
 
     ALL_FILTERS = await get_filters_list(chat_id)
     for filter_ in ALL_FILTERS:
-
+        
         if (
             message.command
             and message.command[0] == 'filter'
@@ -57,7 +57,7 @@ async def FilterCheckker(client, message):
             and message.command[1] ==  filter_
         ):
             return
-
+            
         pattern = r"( |^|[^\w])" + re.escape(filter_) + r"( |$|[^\w])"
         if re.search(pattern, text, flags=re.IGNORECASE):
             filter_name, content, text, data_type = await get_filter(chat_id, filter_)
@@ -76,7 +76,7 @@ async def _filters(client, message):
     if message.chat.type == 'private':
         chat_title = 'local'
     FILTERS = await get_filters_list(chat_id)
-
+    
     if len(FILTERS) == 0:
         await message.reply(
             f'No filters in {chat_title}.'
@@ -84,10 +84,10 @@ async def _filters(client, message):
         return
 
     filters_list = f'List of filters in {chat_title}:\n'
-
+    
     for filter_ in FILTERS:
         filters_list += f'- `{filter_}`\n'
-
+    
     await message.reply(
         filters_list
     )
@@ -121,11 +121,11 @@ async def stopall_callback(client, callback_query: CallbackQuery):
 
     if not user.status == ChatMemberStatus.OWNER :
         return await callback_query.answer("Only Owner Can Use This!!") 
-
+    
     if query_data == 'stopall':
         await stop_all_db(chat_id)
         await callback_query.edit_message_text(text="I've deleted all chat filters.")
-
+    
     elif query_data == 'cancel':
         await callback_query.edit_message_text(text='Cancelled.')
 
@@ -138,11 +138,11 @@ async def stop(client, message):
     if not (len(message.command) >= 2):
         await message.reply('Use Help To Know The Command Usage')
         return
-
+    
     filter_name = message.command[1]
     if (filter_name not in await get_filters_list(chat_id)):
         await message.reply("You haven't saved any filters on this word yet!")
         return
-
+    
     await stop_db(chat_id, filter_name)
     await message.reply(f"I've stopped `{filter_name}`.")
