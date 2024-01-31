@@ -162,12 +162,16 @@ async def welcome(client, message: Message):
                 out = start_panel(_)
                 await message.reply_photo(
                     random.choice(Hina_PICS),
-                    caption=_["start_3"].format(
-                        message.from_user.mention,
-                        app.mention,
-                        message.chat.title,
-                        app.mention,
-                    ),
+                    caption = (
+            f"ᴡᴇʟᴄᴏᴍᴇ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ\n\n"
+
+f"┏━━━━»»❀\n"
+f"ᴄʜᴀᴛ ᴜ.ɴ: @{chat.username}\n"
+f"ᴜʀ ɪᴅ: {member.new_chat_member.user.id}\n"
+f"ᴜʀ ᴜ.ɴᴀᴍᴇ: @{member.new_chat_member.user.username}\n"
+f"ᴄᴏᴍᴘʟᴇᴛᴇ {ᴄᴏᴜɴᴛ}ᴍᴇᴍʙᴇʀs\n"
+f"┕━━━━━━━━━━━━»»❀/n"
+            )
                     reply_markup=InlineKeyboardMarkup(out),
                 )
                 await add_served_chat(message.chat.id)
