@@ -7,7 +7,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from Rudra import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from Akshat.core.call import Rudra
+from Rudra.core.call import Rudra
 from config import Akshay
 
 from Rudra.utils import seconds_to_min, time_to_seconds
