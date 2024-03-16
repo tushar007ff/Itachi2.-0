@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from Itachi import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from Rudra import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
 from Rudra.core.call import Itachi
 from Rudra.utils import seconds_to_min, time_to_seconds
 from Rudra.utils.channelplay import get_channeplayCB
