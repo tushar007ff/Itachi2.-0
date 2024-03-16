@@ -7,7 +7,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from Rudra import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from Rudra.core.call import Itachi
+from Rudra.core.call import Rudra
 from Rudra.utils import seconds_to_min, time_to_seconds
 from Rudra.utils.channelplay import get_channeplayCB
 from Rudra.utils.decorators.language import languageCB
@@ -278,7 +278,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await Itachi.stream_call(url)
+                await Rudra.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(_["black_9"])
                 return await app.send_message(
@@ -491,8 +491,8 @@ async def play_music(client, CallbackQuery, _):
     return await mystic.delete()
 
 
-@app.on_callback_query(filters.regex("ItachimousAdmin") & ~BANNED_USERS)
-async def Itachimous_check(client, CallbackQuery):
+@app.on_callback_query(filters.regex("RudramousAdmin") & ~BANNED_USERS)
+async def Rudramous_check(client, CallbackQuery):
     try:
         await CallbackQuery.answer(
             "» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ :\n\nᴏᴘᴇɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs.\n-> ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs\n-> ᴄʟɪᴄᴋ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ\n-> ᴜɴᴄʜᴇᴄᴋ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs.",
@@ -502,7 +502,7 @@ async def Itachimous_check(client, CallbackQuery):
         pass
 
 
-@app.on_callback_query(filters.regex("ItachiPlaylists") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("RudraPlaylists") & ~BANNED_USERS)
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
