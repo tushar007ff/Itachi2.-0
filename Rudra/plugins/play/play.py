@@ -14,15 +14,15 @@ from Rudra.utils import seconds_to_min, time_to_seconds
 from Rudra.utils.channelplay import get_channeplayCB
 from Rudra.utils.decorators.language import languageCB
 from Rudra.utils.decorators.play import PlayWrapper
-from Akshat.utils.formatters import formats
-from Akshat.utils.inline import (
+from Rudra.utils.formatters import formats
+from Rudra.utils.inline import (
     botplaylist_markup,
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from Akshat.utils.database import (
+from Rudra.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
