@@ -1,24 +1,34 @@
 import random
 import string
-
+import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from Rudra import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from Rudra.core.call import Rudra
+from Akshat.core.call import Rax
+from config import Akshay
+
 from Rudra.utils import seconds_to_min, time_to_seconds
 from Rudra.utils.channelplay import get_channeplayCB
 from Rudra.utils.decorators.language import languageCB
 from Rudra.utils.decorators.play import PlayWrapper
-from Rudra.utils.formatters import formats
-from Rudra.utils.inline import (
+from Akshat.utils.formatters import formats
+from Akshat.utils.inline import (
     botplaylist_markup,
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
+)
+from Akshat.utils.database import (
+    add_served_chat,
+    add_served_user,
+    blacklisted_chats,
+    get_lang,
+    is_banned_user,
+    is_on_off,
 )
 from Rudra.utils.logger import play_logs
 from Rudra.utils.stream.stream import stream
@@ -32,6 +42,8 @@ from config import BANNED_USERS, lyrical
     & ~BANNED_USERS
 )
 @PlayWrapper
+# ... (existing code)
+
 async def play_commnd(
     client,
     message: Message,
@@ -43,8 +55,9 @@ async def play_commnd(
     url,
     fplay,
 ):
+    await add_served_chat(message.chat.id)
     mystic = await message.reply_text(
-        _["play_2"].format(channel) if channel else _["play_1"]
+        _["play_2"].format(channel) if channel else random.choice(Akshay)
     )
     plist_id = None
     slider = None
@@ -52,6 +65,7 @@ async def play_commnd(
     spotify = None
     user_id = message.from_user.id
     user_name = message.from_user.first_name
+
     audio_telegram = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
         if message.reply_to_message
@@ -153,7 +167,8 @@ async def play_commnd(
                         config.PLAYLIST_FETCH_LIMIT,
                         message.from_user.id,
                     )
-                except:
+                except Exception as e:
+                    print(e)
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "playlist"
                 plist_type = "yt"
@@ -162,18 +177,28 @@ async def play_commnd(
                 else:
                     plist_id = url.split("=")[1]
                 img = config.PLAYLIST_IMG_URL
-                cap = _["play_9"]
-            else:
-                try:
-                    details, track_id = await YouTube.track(url)
-                except:
-                    return await mystic.edit_text(_["play_3"])
+                cap = _["play_10"]
+            elif "https://youtu.be" in url:
+                videoid = url.split("/")[-1].split("?")[0]
+                details, track_id = await YouTube.track(f"https://www.youtube.com/watch?v={videoid}")
                 streamtype = "youtube"
                 img = details["thumb"]
-                cap = _["play_10"].format(
+                cap = _["play_11"].format(
                     details["title"],
                     details["duration_min"],
                 )
+            else:
+                try:
+                    details, track_id = await YouTube.track(url)
+                except Exception as e:
+                    print(e)
+                    return await mystic.edit_text(_["play_3"])
+                streamtype = "youtube"
+                img = details["thumb"]
+                cap = _["play_11"].format(
+                    details["title"],
+                    details["duration_min"],
+                                  )
         elif await Spotify.valid(url):
             spotify = True
             if not config.SPOTIFY_CLIENT_ID and not config.SPOTIFY_CLIENT_SECRET:
@@ -278,7 +303,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await Rudra.stream_call(url)
+                await Rax.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(_["black_9"])
                 return await app.send_message(
@@ -491,8 +516,8 @@ async def play_music(client, CallbackQuery, _):
     return await mystic.delete()
 
 
-@app.on_callback_query(filters.regex("RudramousAdmin") & ~BANNED_USERS)
-async def Rudramous_check(client, CallbackQuery):
+@app.on_callback_query(filters.regex("RaxmousAdmin") & ~BANNED_USERS)
+async def Raxmous_check(client, CallbackQuery):
     try:
         await CallbackQuery.answer(
             "» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ :\n\nᴏᴘᴇɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs.\n-> ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs\n-> ᴄʟɪᴄᴋ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ\n-> ᴜɴᴄʜᴇᴄᴋ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs.",
@@ -502,7 +527,7 @@ async def Rudramous_check(client, CallbackQuery):
         pass
 
 
-@app.on_callback_query(filters.regex("RudraPlaylists") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("RaxPlaylists") & ~BANNED_USERS)
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
