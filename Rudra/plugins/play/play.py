@@ -57,7 +57,7 @@ async def play_commnd(
 ):
     await add_served_chat(message.chat.id)
     mystic = await message.reply_text(
-        _["play_2"].format(channel) if channel else random.choice(Akshay)
+        _["play_2"].format(channel) if channel else random.choice(Rudra)
     )
     plist_id = None
     slider = None
@@ -527,7 +527,7 @@ async def Raxmous_check(client, CallbackQuery):
         pass
 
 
-@app.on_callback_query(filters.regex("RaxPlaylists") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("RudraPlaylists") & ~BANNED_USERS)
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
