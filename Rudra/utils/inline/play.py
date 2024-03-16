@@ -2,7 +2,7 @@ import math
 from typing import Union
 from pyrogram.types import InlineKeyboardButton
 
-from Akshat.utils.formatters import time_to_seconds
+from Rudra.utils.formatters import time_to_seconds
 
 from Rudra import app
 
