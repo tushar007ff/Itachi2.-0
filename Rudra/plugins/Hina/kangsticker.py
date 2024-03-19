@@ -14,17 +14,17 @@ from pyrogram.errors import (
     UserIsBlocked,
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-from rudra import app
+from Rudra import app
 from config import BOT_USERNAME
-from rudra.utils.errors import capture_err
+from Rudra.utils.errors import capture_err
 
-from rudra.utils.files import (
+from Rudra.utils.files import (
     get_document_from_file_id,
     resize_file_to_sticker_size,
     upload_document,
 )
 
-from rudra.utils.stickerset import (
+from Rudra.utils.stickerset import (
     add_sticker_to_set,
     create_sticker,
     create_sticker_set,

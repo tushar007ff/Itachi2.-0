@@ -1,7 +1,7 @@
 import os
 import requests
 from random import randint
-from rudra.utils.database import (
+from Rudra.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -14,24 +14,24 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton, CallbackQuery,
                             InlineKeyboardMarkup, Message)
-from rudra.utils import close_markup
+from Rudra.utils import close_markup
 from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
-from rudra import Carbon, YouTube, app
-from rudra.utils.decorators.language import language, languageCB
-from rudra.utils.inline.playlist import (botplaylist_markup,
+from Rudra import Carbon, YouTube, app
+from Rudra.utils.decorators.language import language, languageCB
+from Rudra.utils.inline.playlist import (botplaylist_markup,
                                               get_playlist_markup,
                                               warning_markup)
-from rudra.utils.pastebin import KaiBin
+from Rudra.utils.pastebin import KaiBin
 import time
 import yt_dlp
 from youtube_search import YoutubeSearch
 from youtubesearchpython import VideosSearch
 from youtubesearchpython import SearchVideos
 
-from rudra.utils.stream.stream import stream
+from Rudra.utils.stream.stream import stream
 from typing import Dict, List, Union
 
-from rudra.core.mongo import mongodb
+from Rudra.core.mongo import mongodb
 
 playlistdb = mongodb.playlist
 playlist = []

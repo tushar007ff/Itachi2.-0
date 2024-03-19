@@ -1,8 +1,8 @@
 from pyrogram import Client, filters
 from pymongo import MongoClient
 from config import MONGO_DB_URI
-from rudra import app
-from rudra.misc import SUDOERS
+from Rudra import app
+from Rudra.misc import SUDOERS
 
 client = MongoClient(MONGO_DB_URI)
 db = client.send

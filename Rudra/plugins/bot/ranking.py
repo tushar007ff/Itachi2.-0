@@ -1,6 +1,6 @@
 from pyrogram import filters
 from pymongo import MongoClient
-from rudra import app
+from Rudra import app
 from config import MONGO_DB_URI
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import random

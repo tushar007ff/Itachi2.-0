@@ -7,10 +7,10 @@ from PIL import Image
 from pyrogram import filters
 from pyrogram.types import Message
 
-from rudra import app
-from rudra.utils.errors import capture_err
+from Rudra import app
+from Rudra.utils.errors import capture_err
 
-from rudra.core.sections import section
+from Rudra.core.sections import section
 
 
 async def convert(
