@@ -21,7 +21,7 @@ from Rudra.utils.decorators.language import language, languageCB
 from Rudra.utils.inline.playlist import (botplaylist_markup,
                                               get_playlist_markup,
                                               warning_markup)
-from Rudra.utils.pastebin import KaiBin
+from Rudra.utils.pastebin import RudraBin
 import time
 import yt_dlp
 from youtube_search import YoutubeSearch
