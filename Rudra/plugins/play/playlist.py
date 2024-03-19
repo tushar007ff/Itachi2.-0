@@ -114,7 +114,7 @@ async def check_playlist(client, message: Message, _):
         count += 1
         msg += f"\n\n{count}- {title[:70]}\n"
         msg += _["playlist_5"].format(duration)
-    link = await KaiBin(msg)
+    link = await RudraBin(msg)
     lines = msg.count("\n")
     if lines >= 17:
         car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -448,7 +448,7 @@ async def add_playlist(client, CallbackQuery, _):
     await CallbackQuery.answer("➻ ᴛᴏ ᴀᴅᴅ ᴀ sᴏɴɢ ɪɴ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ ᴊᴜsᴛ ᴛʏᴘᴇ /addplaylist (Here your song name)\n\n➥ ᴇxᴀᴍᴘʟᴇ » /addplaylist Blue Eyes Blue tyes.", show_alert=True)
     
 
-@app.on_callback_query(filters.regex("Kai_playlist") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("Rudra_playlist") & ~BANNED_USERS)
 @languageCB
 async def add_playlist(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()

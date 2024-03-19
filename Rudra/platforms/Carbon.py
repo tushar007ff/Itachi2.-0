@@ -21,7 +21,7 @@ themes = [
     "hopscotch",
     "lucario",
     "material",
-    "monokai",
+    "monoRudra",
     "nightowl",
     "nord",
     "oceanic-next",
