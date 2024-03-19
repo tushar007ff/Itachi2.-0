@@ -1,10 +1,10 @@
 from pyrogram import filters
-
+import random
 from Rudra import YouTube, app
 from Rudra.utils.channelplay import get_channeplayCB
 from Rudra.utils.decorators.language import languageCB
 from Rudra.utils.stream.stream import stream
-from config import BANNED_USERS
+from config import BANNED_USERS, Akshay
 
 
 @app.on_callback_query(filters.regex("LiveStream") & ~BANNED_USERS)
@@ -30,7 +30,7 @@ async def play_live_stream(client, CallbackQuery, _):
     except:
         pass
     mystic = await CallbackQuery.message.reply_text(
-        _["play_2"].format(channel) if channel else _["play_1"]
+        _["play_2"].format(channel) if channel else random.choice(Akshay)
     )
     try:
         details, track_id = await YouTube.track(vidid, True)
