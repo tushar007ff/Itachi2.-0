@@ -14,6 +14,7 @@ ffmpeg-python
 gitpython
 hachoir
 Faker
+blackpink
 pydub
 pycountry
 heroku3
