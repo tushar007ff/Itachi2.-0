@@ -1,8 +1,8 @@
-from KaiMusic.utils.Kai_ban import admin_filter
+from rudra.utils.Kai_ban import admin_filter
 import os
 import csv
 from pyrogram import Client, filters
-from KaiMusic import app
+from rudra import app
 
 @app.on_message(filters.command("user") & admin_filter)
 def user_command(client, message):

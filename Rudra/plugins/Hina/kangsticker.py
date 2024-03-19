@@ -14,17 +14,17 @@ from pyrogram.errors import (
     UserIsBlocked,
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-from KaiMusic import app
+from rudra import app
 from config import BOT_USERNAME
-from KaiMusic.utils.errors import capture_err
+from rudra.utils.errors import capture_err
 
-from KaiMusic.utils.files import (
+from rudra.utils.files import (
     get_document_from_file_id,
     resize_file_to_sticker_size,
     upload_document,
 )
 
-from KaiMusic.utils.stickerset import (
+from rudra.utils.stickerset import (
     add_sticker_to_set,
     create_sticker,
     create_sticker_set,

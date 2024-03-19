@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 import whois
-from KaiMusic import app
+from rudra import app
 
 def get_domain_hosting_info(domain_name):
     try:
