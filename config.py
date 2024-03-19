@@ -142,8 +142,7 @@ YOUTUBE_IMG_URL = "https://graph.org/file/254ea73cd6957392c2e3a.jpg"
 SPOTIFY_ARTIST_IMG_URL = "https://graph.org/file/d174a404bd89ee3e0404b.jpg"
 SPOTIFY_ALBUM_IMG_URL = "https://graph.org/file/e317a46fa6037d994bba3.jpg"
 SPOTIFY_PLAYLIST_IMG_URL = "https://graph.org/file/2f4e84d58f696a64f8031.jpg"
-PING_VID_URL = getenv(
-    "PING_VID_URL", "https://graph.org/file/125e24c0a95894d9421f7.jpg"
+PING_IMG_URL = "https://graph.org/file/125e24c0a95894d9421f7.jpg"
 )
 
 def time_to_seconds(time):
