@@ -1,6 +1,5 @@
 import time
 import random
-from os import getenv
 from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
@@ -28,14 +27,20 @@ from strings import get_string
 
 
 
-HINA_VID_URL = getenv(
-    "HINA_VID_URL", "https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4"
-)
+Hina_PICS = ["https://graph.org/file/254ea73cd6957392c2e3a.jpg",
+"https://graph.org/file/d174a404bd89ee3e0404b.jpg",
+"https://graph.org/file/5ae0c526fedd2ac1d46ba.jpg",
+"https://graph.org/file/e317a46fa6037d994bba3.jpg",
+"https://graph.org/file/2f4e84d58f696a64f8031.jpg",
+"https://graph.org/file/5d074b328bf83b6b8645f.jpg",
+"https://graph.org/file/125e24c0a95894d9421f7.jpg",
+"https://graph.org/file/eedc32809bfe1fadb09e8.jpg",
+"https://graph.org/file/cc3cd65371aff04d41fb2.jpg"]
 
 
 
 
-@app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
+@app.on_message(filters.command(["mstart"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
 async def start_pm(client, message: Message, _):
     await add_served_user(message.from_user.id)
@@ -43,8 +48,8 @@ async def start_pm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            return await message.reply_video(
-                random.choice(HINA_VID_URL),
+            return await message.reply_photo(
+                random.choice(Hina_PICS),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
                 reply_markup=keyboard,
             )
@@ -98,8 +103,8 @@ async def start_pm(client, message: Message, _):
         served_chats = len(await get_served_chats())
         served_users = len(await get_served_users())
         UP, CPU, RAM, DISK = await bot_sys_stats()
-        await message.reply_video(
-            random.choice(HINA_VID_URL),
+        await message.reply_photo(
+            random.choice(Hina_PICS),
             caption=random.choice(Rudraop).format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM,served_users,served_chats),
             reply_markup=InlineKeyboardMarkup(out),
         )
@@ -110,13 +115,13 @@ async def start_pm(client, message: Message, _):
             )
 
 
-@app.on_message(filters.command(["start"]) & filters.group & ~BANNED_USERS)
+@app.on_message(filters.command(["mstart"]) & filters.group & ~BANNED_USERS)
 @LanguageStart
 async def start_gp(client, message: Message, _):
     out = start_panel(_)
     uptime = int(time.time() - _boot_)
-    await message.reply_video(
-        random.choice(HINA_VID_URL),
+    await message.reply_photo(
+        random.choice(Hina_PICS),
         caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
         reply_markup=InlineKeyboardMarkup(out),
     )
@@ -150,8 +155,8 @@ async def welcome(client, message: Message):
                     return await app.leave_chat(message.chat.id)
 
                 out = start_panel(_)
-                await message.reply_video(
-                    random.choice(HINA_VID_URL),
+                await message.reply_photo(
+                    random.choice(Hina_PICS),
                     caption=_["start_3"].format(
                         message.from_user.mention,
                         app.mention,
