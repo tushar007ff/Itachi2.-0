@@ -27,15 +27,7 @@ from strings import get_string
 
 
 
-Hina_PICS = ["https://graph.org/file/254ea73cd6957392c2e3a.jpg",
-"https://graph.org/file/d174a404bd89ee3e0404b.jpg",
-"https://graph.org/file/5ae0c526fedd2ac1d46ba.jpg",
-"https://graph.org/file/e317a46fa6037d994bba3.jpg",
-"https://graph.org/file/2f4e84d58f696a64f8031.jpg",
-"https://graph.org/file/5d074b328bf83b6b8645f.jpg",
-"https://graph.org/file/125e24c0a95894d9421f7.jpg",
-"https://graph.org/file/eedc32809bfe1fadb09e8.jpg",
-"https://graph.org/file/cc3cd65371aff04d41fb2.jpg"]
+Hina_PICS = ["https://graph.org/file/45159996e74f954a4fe7b.mp4"]
 
 
 
