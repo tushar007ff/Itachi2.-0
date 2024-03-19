@@ -1,5 +1,6 @@
 import time
 import random
+from os import getenv
 from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
@@ -9,7 +10,6 @@ import config
 from Rudra import app
 from Rudra.misc import _boot_
 from Rudra.plugins.sudo.sudoers import sudoers_list
-from Rudra.utils.formatters import formats
 from Rudra.utils.database import get_served_chats, get_served_users, get_sudoers
 from Rudra.utils import bot_sys_stats
 from Rudra.utils.database import (
@@ -28,7 +28,9 @@ from strings import get_string
 
 
 
-Hina_PICS = ["https://graph.org/file/45159996e74f954a4fe7b.mp4"]
+HINA_IMG_URL = getenv(
+    "HINA_IMG_URL", "https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4"
+)
 
 
 
