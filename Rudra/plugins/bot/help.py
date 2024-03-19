@@ -45,7 +45,7 @@ async def helper_private(
         )
 
 
-@app.on_message(filters.command(["hgghk"]) & filters.group & ~BANNED_USERS)
+@app.on_message(filters.command(["help"]) & filters.group & ~BANNED_USERS)
 @LanguageStart
 async def help_com_group(client, message: Message, _):
     keyboard = private_help_panel(_)
