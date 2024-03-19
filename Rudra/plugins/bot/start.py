@@ -9,6 +9,8 @@ import config
 from Rudra import app
 from Rudra.misc import _boot_
 from Rudra.plugins.sudo.sudoers import sudoers_list
+from Rudra.utils.database import get_served_chats, get_served_users, get_sudoers
+from Rudra.utils import bot_sys_stats
 from Rudra.utils.database import (
     add_served_chat,
     add_served_user,
@@ -20,30 +22,25 @@ from Rudra.utils.database import (
 from Rudra.utils.decorators.language import LanguageStart
 from Rudra.utils.formatters import get_readable_time
 from Rudra.utils.inline import help_pannel, private_panel, start_panel
-from config import BANNED_USERS
+from config import BANNED_USERS, Rudraop
 from strings import get_string
 
 
 
-Hina_PICS = [
-"https://telegra.ph/file/2e85d11aefdf6cd01301b.jpg",
-"https://telegra.ph/file/0a08b180583f13952336a.jpg",
-"https://telegra.ph/file/ace92d59d19127d2d4e89.jpg",
-"https://telegra.ph/file/bb0a28259990c6a978985.jpg",
-"https://telegra.ph/file/ace92d59d19127d2d4e89.jpg",
-"https://telegra.ph/file/a0db46dfacd94e489117b.jpg",
-"https://telegra.ph/file/cd77be2595cdc2fca60a3.jpg",
-"https://telegra.ph/file/632724b3d30c691247c77.jpg",
-"https://telegra.ph/file/a2d01afe4f2cb1d4b650c.jpg",
-"https://telegra.ph/file/94dc035df11dfb159b999.jpg",
-"https://telegra.ph/file/fed9a5b1cbaaefc3a818c.jpg",
-"https://telegra.ph/file/66fd03632cbb38bdb4193.jpg"
-
-]
+YUMI_PICS = ["https://graph.org/file/254ea73cd6957392c2e3a.jpg",
+"https://graph.org/file/d174a404bd89ee3e0404b.jpg",
+"https://graph.org/file/5ae0c526fedd2ac1d46ba.jpg",
+"https://graph.org/file/e317a46fa6037d994bba3.jpg",
+"https://graph.org/file/2f4e84d58f696a64f8031.jpg",
+"https://graph.org/file/5d074b328bf83b6b8645f.jpg",
+"https://graph.org/file/125e24c0a95894d9421f7.jpg",
+"https://graph.org/file/eedc32809bfe1fadb09e8.jpg",
+"https://graph.org/file/cc3cd65371aff04d41fb2.jpg"]
 
 
 
-@app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
+
+@app.on_message(filters.command(["mstart"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
 async def start_pm(client, message: Message, _):
     await add_served_user(message.from_user.id)
@@ -52,7 +49,7 @@ async def start_pm(client, message: Message, _):
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             return await message.reply_photo(
-                random.choice(Hina_PICS),
+                random.choice(YUMI_PICS),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
                 reply_markup=keyboard,
             )
@@ -103,9 +100,12 @@ async def start_pm(client, message: Message, _):
                 )
     else:
         out = private_panel(_)
+        served_chats = len(await get_served_chats())
+        served_users = len(await get_served_users())
+        UP, CPU, RAM, DISK = await bot_sys_stats()
         await message.reply_photo(
-            random.choice(Hina_PICS),
-            caption=_["start_2"].format(message.from_user.mention, app.mention),
+            random.choice(YUMI_PICS),
+            caption=random.choice(Rudraop).format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM,served_users,served_chats),
             reply_markup=InlineKeyboardMarkup(out),
         )
         if await is_on_off(2):
@@ -115,13 +115,13 @@ async def start_pm(client, message: Message, _):
             )
 
 
-@app.on_message(filters.command(["start"]) & filters.group & ~BANNED_USERS)
+@app.on_message(filters.command(["mstart"]) & filters.group & ~BANNED_USERS)
 @LanguageStart
 async def start_gp(client, message: Message, _):
     out = start_panel(_)
     uptime = int(time.time() - _boot_)
     await message.reply_photo(
-        random.choice(Hina_PICS),
+        random.choice(YUMI_PICS),
         caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
         reply_markup=InlineKeyboardMarkup(out),
     )
@@ -156,9 +156,9 @@ async def welcome(client, message: Message):
 
                 out = start_panel(_)
                 await message.reply_photo(
-                    random.choice(Hina_PICS),
+                    random.choice(YUMI_PICS),
                     caption=_["start_3"].format(
-                        message.from_user.first_name,
+                        message.from_user.mention,
                         app.mention,
                         message.chat.title,
                         app.mention,
